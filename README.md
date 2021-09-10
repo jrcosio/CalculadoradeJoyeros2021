@@ -1,4 +1,4 @@
-# VerificarQRCovid
+# Calculadora de Joyeros 2021
 App para Android para calcular diferentes operaciones que tienen que hacer los joyeros.
 
 Diseñada y programada por JOSÉ RAMÓN BLANCO GUTIÉRREZ
