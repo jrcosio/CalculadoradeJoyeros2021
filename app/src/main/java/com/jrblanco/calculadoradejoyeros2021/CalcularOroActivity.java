@@ -3,6 +3,8 @@ package com.jrblanco.calculadoradejoyeros2021;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.widget.Toolbar;
 
 
@@ -19,6 +21,8 @@ public class CalcularOroActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setSubtitle("Calcular Oro");
         setSupportActionBar(toolbar);
+
+       // binding.textView16.setVisibility(View.GONE); //View.VISIBLE
 
     }
 }
