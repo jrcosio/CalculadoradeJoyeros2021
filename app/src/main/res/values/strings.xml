@@ -11,5 +11,7 @@
     <string name="etiquetaOpenSource">Código fuente - Open Source</string>
     <string name="github">https://www.github.com/jrcosio/Calculadoradeoyeros2021</string>
     <string name="btnOK">OK</string>
+    <string name="etiquetaTipoOro">Tipo de oro</string>
 
+    <string name="btn18K">18 Klts</string>
 </resources>
