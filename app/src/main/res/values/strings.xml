@@ -24,4 +24,7 @@
     <string name="btnRosa">ROSA</string>
     <string name="btnBlanco">BLANCO</string>
 
+    <string name="etiquetaPlataFina">Introduce la Plata fina 999 ml</string>
+    <string name="textGrPlata">Gr. de plata</string>
+
 </resources>

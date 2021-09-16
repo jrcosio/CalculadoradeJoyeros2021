@@ -60,12 +60,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calcularOro() {
-        Intent intentCalcularOro = new Intent(this, CalcularOroActivity.class);
-        startActivity(intentCalcularOro);
+        startActivity(new Intent(this, CalcularOroActivity.class));
     }
 
     private void calcularPlata() {
-        Toast.makeText(MainActivity.this,"Plata",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this,CalcularPlataActivity.class));
     }
 
     private void calcularSoldadura() {
@@ -77,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void acercade() {
-        Intent intentAcercaDe = new Intent(this,AcercadeActivity.class);
-        startActivity(intentAcercaDe);
+        startActivity(new Intent(this,AcercadeActivity.class));
     }
 }

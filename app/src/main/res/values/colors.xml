@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fondoactivity">#FF272A31</color>
     <color name="gold">#FFC59666</color>
-    <color name="menuOro">#2A314D</color>
+    <color name="menuOro">#FF2A314D</color>
+    <color name="plata">#FFBEBEBE</color>
 </resources>
