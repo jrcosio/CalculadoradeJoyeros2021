@@ -11,7 +11,17 @@
     <string name="etiquetaOpenSource">Código fuente - Open Source</string>
     <string name="github">https://www.github.com/jrcosio/Calculadoradeoyeros2021</string>
     <string name="btnOK">OK</string>
+    <string name="etiquetaORO24K">Introduce el oro de 24K</string>
+    <string name="ImagenORO">Imagen ORO</string>
+    <string name="textGrORO">Gr. de oro</string>
     <string name="etiquetaTipoOro">Tipo de oro</string>
-
+    <string name="gr">gr</string>
     <string name="btn18K">18 K</string>
+    <string name="btn14K">14 K</string>
+    <string name="btn12K">12 K</string>
+    <string name="EtiquetaColorOro">Color del oro</string>
+    <string name="btnAmarillo">AMARILLO</string>
+    <string name="btnRosa">ROSA</string>
+    <string name="btnBlanco">BLANCO</string>
+
 </resources>
