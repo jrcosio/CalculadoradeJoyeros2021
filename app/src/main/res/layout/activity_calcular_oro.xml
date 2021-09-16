@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalcularOroActivity"
-    android:background="@color/fondoactivity">
+    android:background="@color/fondoactivity"
+    tools:context=".CalcularOroActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -19,12 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         app:cardBackgroundColor="@color/purple_200"
         app:cardCornerRadius="24dp"
         app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvTipoOro"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
@@ -36,7 +38,6 @@
                 android:id="@+id/txtTitleCalOro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Introduce el oro de 24K"
                 android:textColor="@color/black"
@@ -50,7 +51,6 @@
                 android:layout_width="98dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitleCalOro"
                 app:srcCompat="@drawable/oro_512" />
@@ -88,14 +88,15 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvTipoOro"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         app:cardBackgroundColor="@color/menuOro"
         app:cardCornerRadius="24dp"
         app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvColorOro"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvGramosOro">
 
@@ -155,14 +156,15 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvColorOro"
         android:layout_width="0dp"
-        android:layout_height="95dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         app:cardBackgroundColor="@color/menuOro"
         app:cardCornerRadius="24dp"
         app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvResultados"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvTipoOro">
 
@@ -175,7 +177,6 @@
                 android:id="@+id/btnBlanco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:backgroundTint="#6E7B7E"
                 android:text="Blanco"
                 app:layout_constraintEnd_toStartOf="@+id/btnRosa"
@@ -221,37 +222,34 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvResultados"
         android:layout_width="0dp"
-        android:layout_height="240dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         app:cardBackgroundColor="@color/teal_700"
         app:cardCornerRadius="24dp"
         app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtTotalAleacion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvColorOro">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvresultPlata"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="8dp"
                 android:elevation="5dp"
                 app:cardBackgroundColor="@color/menuOro"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:layout_constraintBottom_toTopOf="@+id/cvResultCobre"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:cardElevation="6dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -314,19 +312,15 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvResultCobre"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:elevation="5dp"
                 app:cardBackgroundColor="@color/menuOro"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:layout_constraintBottom_toTopOf="@+id/cvResultPaladio"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cvresultPlata">
+                app:cardElevation="6dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -386,20 +380,14 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvResultPaladio"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:elevation="5dp"
                 app:cardBackgroundColor="@color/menuOro"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cvResultCobre">
+                app:cardElevation="6dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -456,23 +444,24 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/txtTotalAleacion"
         android:layout_width="0dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/botones_naranjas"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOK"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvResultados" />
 
@@ -482,7 +471,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginEnd="96dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/botones_naranjas"
         android:foreground="?attr/selectableItemBackground"
         android:text="@string/btnOK"

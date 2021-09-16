@@ -25,6 +25,7 @@
         app:cardBackgroundColor="@color/gold"
         app:cardCornerRadius="39dp"
         app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvSoldaduras"
         app:layout_constraintEnd_toStartOf="@+id/cvPlata"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +52,6 @@
         android:id="@+id/cvPlata"
         android:layout_width="120dp"
         android:layout_height="150dp"
-        android:layout_marginTop="32dp"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
         android:paddingRight="2dp"
@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cvOro"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toTopOf="@+id/cvOro">
 
         <ImageView
             android:id="@+id/imagePlata"
@@ -86,13 +86,15 @@
         android:layout_width="match_parent"
         android:layout_height="148dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
         app:cardBackgroundColor="@color/purple_200"
         app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvFundicion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvOro">
 
@@ -123,7 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="148dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
@@ -131,6 +133,7 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvSoldaduras"
         app:layout_constraintVertical_bias="0.32">
