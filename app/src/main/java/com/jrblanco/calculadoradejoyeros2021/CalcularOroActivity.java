@@ -39,7 +39,9 @@ public class CalcularOroActivity extends AppCompatActivity {
     private void botonCalcularOro(String tipo){
         DecimalFormat df = new DecimalFormat("0.00");
        // df.setRoundingMode(RoundingMode.HALF_UP);
-
+        float resultPlata = 0;
+        float resultCobre = 0;
+        float resultPaladio = 0;
         float gramosOro = 0;
         try {
              gramosOro = getGramosOro();
@@ -48,35 +50,52 @@ public class CalcularOroActivity extends AppCompatActivity {
             gramosOro = 0;
         }
 
-        float resultPlata = 0;
-        float resultCobre = 0;
-        float resultPaladio = 0;
         if (tipo.equals("AMARILLO")) {
             if (binding.rbtn18K.isChecked()) {
                 resultPlata = gramosOro * 0.2200f;
                 resultCobre = gramosOro * 0.1133f;
-                binding.cvResultPaladio.setVisibility(View.GONE);
+            } else if (binding.rbtn14K.isChecked()) {
+                resultPlata = gramosOro * 0.4721f;
+                resultCobre = gramosOro * 0.2431f;
+            } else if (binding.rbtn12K.isChecked()) {
+                resultPlata = gramosOro * 0.6600f;
+                resultCobre = gramosOro * 0.3399f;
             }
+            binding.cvResultPaladio.setVisibility(View.GONE);
         } else if (tipo.equals("BLANCO")){
             if (binding.rbtn18K.isChecked()) {
                 resultPlata = gramosOro * 0.0540f;
                 resultCobre = gramosOro * 0.1318f;
                 resultPaladio = gramosOro * 0.1475f;
-                binding.cvResultPaladio.setVisibility(View.VISIBLE);
+            } else if (binding.rbtn14K.isChecked()) {
+                resultPlata = gramosOro * 0.2828f;
+                resultCobre = gramosOro * 0.1159f;
+                resultPaladio = gramosOro * 0.3165f;
+            } else if (binding.rbtn12K.isChecked()) {
+                resultPlata = gramosOro * 0.3954f;
+                resultCobre = gramosOro * 0.1620f;
+                resultPaladio = gramosOro *0.3954f;
             }
+            binding.cvResultPaladio.setVisibility(View.VISIBLE);
         } else if (tipo.equals("ROSA")) {
             if (binding.rbtn18K.isChecked()) {
-                resultPlata = gramosOro * 0.0670f;
-                resultCobre = gramosOro * 0.2660f;
-                binding.cvResultPaladio.setVisibility(View.GONE);
+                resultPlata = gramosOro * 0.1100f;
+                resultCobre = gramosOro * 0.2233f;
+            } else if (binding.rbtn14K.isChecked()) {
+                resultPlata = 14.0f;
+                resultCobre = 14.0f;
+            } else if (binding.rbtn12K.isChecked()) {
+                resultPlata = 12.0f;
+                resultCobre = 12.0f;
             }
+            binding.cvResultPaladio.setVisibility(View.GONE);
         }
 
 
         binding.txtResultadoPlata.setText(df.format(resultPlata));
         binding.txtResultadoCobre.setText(df.format(resultCobre));
         binding.txtResultadoPaladio.setText(df.format(resultPaladio));
-        binding.txtTotalAleacion.setText("Aleación TOTAL: " + df.format(gramosOro + resultPlata + resultCobre +resultPaladio) + "gr");
+        binding.txtTotalAleacion.setText("Total de oro " + tipo +": " + df.format(gramosOro + resultPlata + resultCobre +resultPaladio) + "gr");
     }
 
     private float getGramosOro() {
