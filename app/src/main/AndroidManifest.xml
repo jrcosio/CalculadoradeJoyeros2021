@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculadoraDeJoyeros2021">
         <activity
+            android:name=".CalcularPlataActivity"
+            android:exported="true" />
+        <activity
             android:name=".CalcularOroActivity"
             android:exported="true" />
         <activity
