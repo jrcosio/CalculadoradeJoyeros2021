@@ -33,7 +33,6 @@ public class CalcularOroActivity extends AppCompatActivity {
         binding.btnBlanco.setOnClickListener(view -> botonCalcularOro("BLANCO"));
         binding.btnRosa.setOnClickListener(view -> botonCalcularOro("ROSA"));
 
-
     }
 
     private void botonCalcularOro(String tipo){
@@ -50,45 +49,49 @@ public class CalcularOroActivity extends AppCompatActivity {
             gramosOro = 0;
         }
 
-        if (tipo.equals("AMARILLO")) {
-            if (binding.rbtn18K.isChecked()) {
-                resultPlata = gramosOro * 0.2200f;
-                resultCobre = gramosOro * 0.1133f;
-            } else if (binding.rbtn14K.isChecked()) {
-                resultPlata = gramosOro * 0.4721f;
-                resultCobre = gramosOro * 0.2431f;
-            } else if (binding.rbtn12K.isChecked()) {
-                resultPlata = gramosOro * 0.6600f;
-                resultCobre = gramosOro * 0.3399f;
-            }
-            binding.cvResultPaladio.setVisibility(View.GONE);
-        } else if (tipo.equals("BLANCO")){
-            if (binding.rbtn18K.isChecked()) {
-                resultPlata = gramosOro * 0.0540f;
-                resultCobre = gramosOro * 0.1318f;
-                resultPaladio = gramosOro * 0.1475f;
-            } else if (binding.rbtn14K.isChecked()) {
-                resultPlata = gramosOro * 0.2828f;
-                resultCobre = gramosOro * 0.1159f;
-                resultPaladio = gramosOro * 0.3165f;
-            } else if (binding.rbtn12K.isChecked()) {
-                resultPlata = gramosOro * 0.3954f;
-                resultCobre = gramosOro * 0.1620f;
-                resultPaladio = gramosOro *0.3954f;
-            }
-            binding.cvResultPaladio.setVisibility(View.VISIBLE);
-        } else if (tipo.equals("ROSA")) {
-            if (binding.rbtn18K.isChecked()) {
-                resultPlata = gramosOro * 0.1100f;
-                resultCobre = gramosOro * 0.2233f;
-            } else if (binding.rbtn14K.isChecked()) {
-                resultPlata = 14.0f;
-                resultCobre = 14.0f;
-            } else if (binding.rbtn12K.isChecked()) {
-                resultPlata = 12.0f;
-                resultCobre = 12.0f;
-            }
-            binding.cvResultPaladio.setVisibility(View.GONE);
+        switch (tipo) {
+            case "AMARILLO":
+                if (binding.rbtn18K.isChecked()) {
+                    resultPlata = gramosOro * 0.2200f;
+                    resultCobre = gramosOro * 0.1133f;
+                } else if (binding.rbtn14K.isChecked()) {
+                    resultPlata = gramosOro * 0.4721f;
+                    resultCobre = gramosOro * 0.2431f;
+                } else if (binding.rbtn12K.isChecked()) {
+                    resultPlata = gramosOro * 0.6600f;
+                    resultCobre = gramosOro * 0.3399f;
+                }
+                binding.cvResultPaladio.setVisibility(View.GONE);
+                break;
+            case "BLANCO":
+                if (binding.rbtn18K.isChecked()) {
+                    resultPlata = gramosOro * 0.0540f;
+                    resultCobre = gramosOro * 0.1318f;
+                    resultPaladio = gramosOro * 0.1475f;
+                } else if (binding.rbtn14K.isChecked()) {
+                    resultPlata = gramosOro * 0.2828f;
+                    resultCobre = gramosOro * 0.1159f;
+                    resultPaladio = gramosOro * 0.3165f;
+                } else if (binding.rbtn12K.isChecked()) {
+                    resultPlata = gramosOro * 0.3954f;
+                    resultCobre = gramosOro * 0.1620f;
+                    resultPaladio = gramosOro * 0.3954f;
+                }
+                binding.cvResultPaladio.setVisibility(View.VISIBLE);
+                break;
+            case "ROSA":
+                if (binding.rbtn18K.isChecked()) {
+                    resultPlata = gramosOro * 0.1100f;
+                    resultCobre = gramosOro * 0.2233f;
+                } else if (binding.rbtn14K.isChecked()) {
+                    resultPlata = gramosOro * 0.2431f;
+                    resultCobre = gramosOro * 0.4721f;
+                } else if (binding.rbtn12K.isChecked()) {
+                    resultPlata = gramosOro * 0.3399f;
+                    resultCobre = gramosOro * 0.6600f;
+                }
+                binding.cvResultPaladio.setVisibility(View.GONE);
+                break;
         }
 
 
