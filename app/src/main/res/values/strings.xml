@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Calculadora de Joyeros 2021</string>
-    <string name="app_subtitle">Por J.R. Blanco - twitter: @jr_blanco_</string>
+    <string name="app_subtitle">Por J.R. Blanco - Blanco Joyeros</string>
     <string name="etiquetaProg">Desarrollado por</string>
     <string name="prog">José Ramón Blanco Gutiérrez</string>
     <string name="etiquetaEmail">Correo de contacto</string>
@@ -9,7 +9,7 @@
     <string name="twitter">https://twitter.com/jr_blanco_</string>
     <string name="instagram">https://www.instagram.com/jr.blanco.cantabria</string>
     <string name="etiquetaOpenSource">Código fuente - Open Source</string>
-    <string name="github">https://www.github.com/jrcosio/Calculadoradeoyeros2021</string>
+    <string name="github">https://github.com/jrcosio/CalculadoradeJoyeros2021.git</string>
     <string name="btnOK">OK</string>
     <string name="etiquetaORO24K">Introduce el oro de 24K</string>
     <string name="ImagenORO">Imagen ORO</string>

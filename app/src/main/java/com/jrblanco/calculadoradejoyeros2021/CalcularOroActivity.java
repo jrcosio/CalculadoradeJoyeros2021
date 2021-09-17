@@ -37,7 +37,7 @@ public class CalcularOroActivity extends AppCompatActivity {
 
     private void botonCalcularOro(String tipo){
         DecimalFormat df = new DecimalFormat("0.00");
-       // df.setRoundingMode(RoundingMode.HALF_UP);
+        df.setRoundingMode(RoundingMode.HALF_UP);
         float resultPlata = 0;
         float resultCobre = 0;
         float resultPaladio = 0;
@@ -81,8 +81,8 @@ public class CalcularOroActivity extends AppCompatActivity {
                 break;
             case "ROSA":
                 if (binding.rbtn18K.isChecked()) {
-                    resultPlata = gramosOro * 0.1100f;
-                    resultCobre = gramosOro * 0.2233f;
+                    resultPlata = gramosOro * 0.1133f;
+                    resultCobre = gramosOro * 0.2200f;
                 } else if (binding.rbtn14K.isChecked()) {
                     resultPlata = gramosOro * 0.2431f;
                     resultCobre = gramosOro * 0.4721f;
