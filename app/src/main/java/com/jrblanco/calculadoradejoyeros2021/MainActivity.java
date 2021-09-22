@@ -67,9 +67,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,CalcularPlataActivity.class));
     }
 
-    private void calcularSoldadura() {
-        Toast.makeText(MainActivity.this,"Soldadura",Toast.LENGTH_SHORT).show();
-    }
+    private void calcularSoldadura() { startActivity((new Intent(this,SoldadurasActivity.class))); }
 
     private void calcularFundicion() {
         Toast.makeText(MainActivity.this,"Fundición",Toast.LENGTH_SHORT).show();
