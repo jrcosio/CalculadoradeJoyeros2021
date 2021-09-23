@@ -26,5 +26,7 @@
 
     <string name="etiquetaPlataFina">Introduce la Plata fina 999 ml</string>
     <string name="textGrPlata">Gr. de plata</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

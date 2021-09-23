@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
         binding.cvOro.setOnClickListener(view -> this.calcularOro());
         binding.cvPlata.setOnClickListener(view -> this.calcularPlata());
         binding.cvSoldaduras.setOnClickListener(view -> this.calcularSoldadura());
