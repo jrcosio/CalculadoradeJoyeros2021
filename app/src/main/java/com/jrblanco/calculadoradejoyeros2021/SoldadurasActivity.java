@@ -12,19 +12,30 @@ import com.jrblanco.calculadoradejoyeros2021.databinding.ActivitySoldadurasBindi
 public class SoldadurasActivity extends AppCompatActivity {
 
     private ActivitySoldadurasBinding binding;
+    private byte queFragmentEstaIniciado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.queFragmentEstaIniciado = 0;
         binding = ActivitySoldadurasBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setSubtitle("Soldaduras de Oro y Plata");
-        setSupportActionBar(toolbar);
+        binding.toolbar.getRoot().setSubtitle("Soldaduras de Oro y Plata");
+        setSupportActionBar(binding.toolbar.getRoot());
 
-        binding.btnSoldaduraOro.setOnClickListener( view -> this.mostrarFragmentSoldaduras(new SoldaduraOroFragment()));
-        binding.btnSoldaduraPlata.setOnClickListener( view -> this.mostrarFragmentSoldaduras(new SoldaduraPlataFragment()));
+        binding.btnSoldaduraOro.setOnClickListener( view -> {
+            if (this.queFragmentEstaIniciado != 1) {
+                this.queFragmentEstaIniciado = 1;
+                this.mostrarFragmentSoldaduras(new SoldaduraOroFragment());
+            }
+        });
+        binding.btnSoldaduraPlata.setOnClickListener( view -> {
+            if (this.queFragmentEstaIniciado != 2) {
+                this.queFragmentEstaIniciado = 2;
+                this.mostrarFragmentSoldaduras(new SoldaduraPlataFragment());
+            }
+        });
         binding.btnOkSoldaduras.setOnClickListener(v -> this.finish());
 
     }

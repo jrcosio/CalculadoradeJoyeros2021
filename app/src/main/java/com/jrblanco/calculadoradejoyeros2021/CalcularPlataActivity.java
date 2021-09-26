@@ -1,15 +1,11 @@
 package com.jrblanco.calculadoradejoyeros2021;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.jrblanco.calculadoradejoyeros2021.databinding.ActivityCalcularPlataBinding;
 
@@ -25,9 +21,8 @@ public class CalcularPlataActivity extends AppCompatActivity {
         binding = ActivityCalcularPlataBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setSubtitle("Calcular Plata");
-        setSupportActionBar(toolbar);
+        binding.toolbar.getRoot().setSubtitle("Calcular Plata");
+        setSupportActionBar(binding.toolbar.getRoot());
 
         milesimasSeleccionada = R.id.rbtn925; //rButton por defecto.
 
@@ -48,9 +43,7 @@ public class CalcularPlataActivity extends AppCompatActivity {
 
         });
 
-        binding.rGrupoBtn.setOnCheckedChangeListener((group, checkedId) -> {
-            this.calcula(checkedId);
-        });
+        binding.rGrupoBtn.setOnCheckedChangeListener((group, checkedId) -> this.calcula(checkedId));
     }
     private void calcula(int rbtnSeleccionado) {
         DecimalFormat df = new DecimalFormat("0.00");

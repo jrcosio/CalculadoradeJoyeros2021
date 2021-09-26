@@ -15,25 +15,18 @@ import com.jrblanco.calculadoradejoyeros2021.databinding.FragmentSoldaduraOroBin
 
 
 public class SoldaduraOroFragment extends Fragment {
-    FragmentSoldaduraOroBinding binding;
+
+    private FragmentSoldaduraOroBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentSoldaduraOroBinding.inflate(inflater,container,false);
-        View view = binding.getRoot();
 
-//        View view = inflater.inflate(R.layout.fragment_soldadura_oro, container, false);
-//
-//        TextView text = view.findViewById(R.id.textPrueba);
-//        Button boton = view.findViewById(R.id.btnPrueba);
-//
-//        boton.setOnClickListener(v -> {
-//            text.setText("Hola mundo");
-//
-//        });
         binding.btnPrueba.setOnClickListener(v -> {
             binding.textPrueba.setText("Hola mundo");
         });
-        return view;
+
+        return binding.getRoot();
     }
 }
