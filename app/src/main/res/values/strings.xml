@@ -27,6 +27,6 @@
     <string name="etiquetaPlataFina">Introduce la Plata fina 999 mm</string>
     <string name="textGrPlata">Gr. de plata</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="TipoSoldPlata">Tipo de Soldadura de Plata</string>
+    <string name="TipoSoldPlata">Tipo de Soldadura</string>
 
 </resources>

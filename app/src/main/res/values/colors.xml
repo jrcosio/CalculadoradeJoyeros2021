@@ -11,4 +11,5 @@
     <color name="gold">#FFC59666</color>
     <color name="menuOro">#FF2A314D</color>
     <color name="plata">#FFBEBEBE</color>
+    <color name="card_color">#FF424242</color>
 </resources>

@@ -51,19 +51,27 @@ public class CalcularPlataActivity extends AppCompatActivity {
         float resultado = 0;
         this.milesimasSeleccionada = rbtnSeleccionado;
 
+        float gramosPlata;
+
+        try {
+            gramosPlata = this.getGramosPlata();
+        } catch (Exception e){
+            gramosPlata = 0;
+        }
+
         switch (rbtnSeleccionado) {
 
             case R.id.rbtn950:
-                resultado = this.getGramosPlata() * 0.0516f;
+                resultado = gramosPlata * 0.0516f;
                 break;
             case R.id.rbtn925:
-                resultado = this.getGramosPlata() * 0.0800f;
+                resultado = gramosPlata * 0.0800f;
                 break;
             case R.id.rbtn900:
-                resultado = this.getGramosPlata() * 0.1100f;
+                resultado = gramosPlata * 0.1100f;
                 break;
             case R.id.rbtn800:
-                resultado = this.getGramosPlata() * 0.2487f;
+                resultado = gramosPlata * 0.2487f;
                 break;
             default:
                 resultado=0;

@@ -9,26 +9,280 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_orange_light">
+        android:background="@color/fondoactivity">
 
-        <Button
-            android:id="@+id/btnPrueba"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSoldaduraBase"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="@color/card_color"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvOroSoldadura"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                android:paddingTop="5dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="Como obtener la Soldadura BASE*"
+                    android:textColor="@android:color/holo_blue_bright" />
+
+                <Button
+                    android:id="@+id/btnSoldaduraBase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Soldadura BASE" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="* Es una soldadura de 18k con un punto de fusión muy muy bajo"
+                    android:textColor="@color/plata"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOroSoldadura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="@color/purple_700"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvTiposSoldaOro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSoldaduraBase">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="5dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textTitleOroSoldad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="Oro de 18K que deseas usar"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="64dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/oro_512" />
+
+                    <EditText
+                        android:id="@+id/editTextGrOroSol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/textGrORO"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/gr"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTiposSoldaOro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="@color/menuOro"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvResultSoldaduraOro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvOroSoldadura">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textTitleTipoSolOro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Tipo de soldadura"
+                    android:textColor="@color/teal_200" />
+
+                <RadioGroup
+                    android:id="@+id/rbtnGrupoTipoSoldaduras"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtnTipoSolMuyFloja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Muy Floja"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/rbtnTipoSolFloja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Floja"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rbtnTipoSolMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Media"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rbtnTipoSolFuerte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fuerte"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvResultSoldaduraOro"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="@color/teal_700"
+            app:cardCornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/cvTiposSoldaOro">
 
-        <TextView
-            android:id="@+id/textPrueba"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/btnPrueba"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvResultSolBase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/menuOro"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textTitleTipoSolOro2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Soldadura BASE necesaria"
+                            android:textColor="@color/purple_700" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingLeft="2dp"
+                            android:paddingBottom="2dp">
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="8dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:src="@drawable/granallaoro" />
+
+                            <TextView
+                                android:id="@+id/txtResultSolBase"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:text="0,00"
+                                android:textColor="@color/gold"
+                                android:textSize="30sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView31"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="@string/gr"
+                                android:textColor="@color/gold"
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -23,9 +23,6 @@ public class SoldaduraOroFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentSoldaduraOroBinding.inflate(inflater,container,false);
 
-        binding.btnPrueba.setOnClickListener(v -> {
-            binding.textPrueba.setText("Hola mundo");
-        });
 
         return binding.getRoot();
     }

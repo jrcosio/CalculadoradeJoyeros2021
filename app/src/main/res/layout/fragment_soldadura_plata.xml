@@ -15,8 +15,6 @@
             android:id="@+id/cvGramosPlataSoldatura"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             app:cardBackgroundColor="@color/plata"
             app:cardCornerRadius="24dp"
             app:layout_constraintBottom_toTopOf="@+id/cvTiposSolPlata"
@@ -28,7 +26,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="2dp">
 
                 <TextView
                     android:id="@+id/txtTitlePlataSol"
@@ -40,16 +38,16 @@
                     android:gravity="center"
                     android:text="@string/etiquetaPlataFina"
                     android:textColor="@color/menuOro"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/imageLingotePlata"
-                    android:layout_width="81dp"
-                    android:layout_height="63dp"
-                    android:layout_marginStart="24dp"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
                     android:contentDescription="@string/ImagenORO"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtTitlePlataSol"
@@ -90,8 +88,6 @@
             android:id="@+id/cvTiposSolPlata"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             app:cardBackgroundColor="@color/menuOro"
             app:cardCornerRadius="24dp"
             app:layout_constraintBottom_toTopOf="@+id/cvResultSolPlata"
@@ -117,7 +113,7 @@
                     android:gravity="center"
                     android:text="@string/TipoSoldPlata"
                     android:textColor="@color/teal_200"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
                 <RadioGroup
                     android:id="@+id/rbtnGroupSolPlata"
@@ -172,8 +168,6 @@
             android:id="@+id/cvResultSolPlata"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             app:cardBackgroundColor="@color/teal_700"
             app:cardCornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -184,7 +178,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
@@ -203,8 +197,8 @@
 
                         <ImageView
                             android:id="@+id/imageView8"
-                            android:layout_width="47dp"
-                            android:layout_height="53dp"
+                            android:layout_width="46dp"
+                            android:layout_height="41dp"
                             android:layout_marginStart="24dp"
                             android:layout_marginTop="14dp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -220,7 +214,7 @@
                             android:fontFamily="sans-serif-black"
                             android:gravity="right"
                             android:textColor="@color/gold"
-                            android:textSize="40sp"
+                            android:textSize="34sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/textView19"
                             app:layout_constraintStart_toEndOf="@+id/imageView8" />

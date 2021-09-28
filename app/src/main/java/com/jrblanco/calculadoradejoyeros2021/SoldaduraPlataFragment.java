@@ -28,7 +28,7 @@ public class SoldaduraPlataFragment extends Fragment {
 
         binding = FragmentSoldaduraPlataBinding.inflate(inflater,container,false);
 
-        this.tipoDeSoldaduraPlata = R.id.rbtnSolPlataMuyFloja; //Soldadura seleccionada por defecti
+        this.tipoDeSoldaduraPlata = R.id.rbtnSolPlataMuyFloja; //Soldadura seleccionada por defecto
 
         binding.editPlataGramosSol.setOnEditorActionListener((v, actionId, event) -> {
             boolean proceso = false;
