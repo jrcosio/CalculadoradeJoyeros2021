@@ -55,7 +55,8 @@
                     android:layout_weight="1"
                     android:backgroundTint="#FFCFB53B "
                     android:text="Oro Ley"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
                 <Button
                     android:id="@+id/btnSoldaduraOroClasica"
@@ -63,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Clásica"
+                    android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -75,7 +77,8 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/plata"
                     android:text="Plata"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

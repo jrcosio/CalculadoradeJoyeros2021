@@ -12,7 +12,7 @@ import com.jrblanco.calculadoradejoyeros2021.databinding.ActivitySoldadurasBindi
 public class SoldadurasActivity extends AppCompatActivity {
 
     private ActivitySoldadurasBinding binding;
-    private byte queFragmentEstaIniciado;
+    private int queFragmentEstaIniciado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,32 +25,27 @@ public class SoldadurasActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar.getRoot());
 
         binding.btnSoldaduraOro.setOnClickListener( view -> {
-            if (this.queFragmentEstaIniciado != 1) {
-                this.queFragmentEstaIniciado = 1;
-                this.mostrarFragmentSoldaduras(new SoldaduraOroFragment());
-            }
+                this.mostrarFragmentSoldaduras(new SoldaduraOroFragment(),1);
         });
         binding.btnSoldaduraOroClasica.setOnClickListener( view -> {
-            if (this.queFragmentEstaIniciado != 2) {
-                this.queFragmentEstaIniciado = 2;
-                this.mostrarFragmentSoldaduras(new SoldaduraOroClasicaFragment());
-            }
+                this.mostrarFragmentSoldaduras(new SoldaduraOroClasicaFragment(),2);
         });
         binding.btnSoldaduraPlata.setOnClickListener( view -> {
-            if (this.queFragmentEstaIniciado != 3) {
-                this.queFragmentEstaIniciado = 3;
-                this.mostrarFragmentSoldaduras(new SoldaduraPlataFragment());
-            }
+                this.mostrarFragmentSoldaduras(new SoldaduraPlataFragment(),3);
         });
 
         binding.btnOkSoldaduras.setOnClickListener(v -> this.finish());
 
     }
 
-    private void mostrarFragmentSoldaduras(Fragment fragment){
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.flContenedorSoldaduras, fragment)
-                .commit();
+    private void mostrarFragmentSoldaduras(Fragment fragment, int valor){
+        if (this.queFragmentEstaIniciado != valor) {
+            this.queFragmentEstaIniciado = valor;
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.flContenedorSoldaduras, fragment)
+                    .commit();
+        }
+
     }
 }

@@ -9,14 +9,14 @@ import com.jrblanco.calculadoradejoyeros2021.databinding.ActivityAcercadeBinding
 import com.jrblanco.calculadoradejoyeros2021.databinding.ActivityMainBinding;
 
 public class AcercadeActivity extends AppCompatActivity {
+    private ActivityAcercadeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityAcercadeBinding binding = ActivityAcercadeBinding.inflate(getLayoutInflater());
+        binding = ActivityAcercadeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.btnOk.setOnClickListener(v -> this.finish());
-
     }
 }
