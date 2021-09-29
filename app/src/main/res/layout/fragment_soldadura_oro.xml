@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:text="Oro de 18K que deseas usar"
+                    android:text="Oro de 18K (Amarillo, Rosa o Blanco) que deseas usar"
                     android:textColor="@color/white" />
 
                 <LinearLayout

@@ -30,12 +30,19 @@ public class SoldadurasActivity extends AppCompatActivity {
                 this.mostrarFragmentSoldaduras(new SoldaduraOroFragment());
             }
         });
-        binding.btnSoldaduraPlata.setOnClickListener( view -> {
+        binding.btnSoldaduraOroClasica.setOnClickListener( view -> {
             if (this.queFragmentEstaIniciado != 2) {
                 this.queFragmentEstaIniciado = 2;
+                this.mostrarFragmentSoldaduras(new SoldaduraOroClasicaFragment());
+            }
+        });
+        binding.btnSoldaduraPlata.setOnClickListener( view -> {
+            if (this.queFragmentEstaIniciado != 3) {
+                this.queFragmentEstaIniciado = 3;
                 this.mostrarFragmentSoldaduras(new SoldaduraPlataFragment());
             }
         });
+
         binding.btnOkSoldaduras.setOnClickListener(v -> this.finish());
 
     }
