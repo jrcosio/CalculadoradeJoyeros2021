@@ -50,9 +50,9 @@ public class SoldaduraOroFragment extends Fragment {
         binding.rbtnGrupoTipoSoldadurasOro.setOnCheckedChangeListener((group, checkedId) -> calcula(checkedId));
 
         binding.btnSoldaduraBase.setOnClickListener(view -> {
-            Toast.makeText(getContext(),
-                    "Formula de la Soldadura Base 18K",
-                    Toast.LENGTH_SHORT).show();
+            SoldaduraBaseDialogFragment soldaduraBaseDialogFragment = new SoldaduraBaseDialogFragment();
+            soldaduraBaseDialogFragment.setCancelable(false);
+            soldaduraBaseDialogFragment.show(getActivity().getSupportFragmentManager(), "Dialog");
         });
 
         return binding.getRoot();
