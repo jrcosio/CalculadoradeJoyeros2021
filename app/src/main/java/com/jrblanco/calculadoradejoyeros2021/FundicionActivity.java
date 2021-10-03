@@ -94,7 +94,7 @@ public class FundicionActivity extends AppCompatActivity {
 
     private void calcularMetal(int metal){
         //Pesos especificos de los metales que usamos
-        final float PEORO18 = 15.34f; //Oro 24k PE = 19.26f
+        final float PEORO18 = 15.34f; // Oro 24k PE = 19.26f
         final float PEPLATA = 10.5f;
         final float PEBRONCE = 10.0f;
         final float PEPLATINO = 21.15f;
