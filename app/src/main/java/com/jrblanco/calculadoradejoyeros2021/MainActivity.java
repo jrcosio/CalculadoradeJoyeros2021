@@ -57,21 +57,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void calcularOro() {
-        startActivity(new Intent(this, CalcularOroActivity.class));
-    }
+    private void calcularOro() { startActivity(new Intent(this, CalcularOroActivity.class)); }
 
-    private void calcularPlata() {
-        startActivity(new Intent(this,CalcularPlataActivity.class));
-    }
+    private void calcularPlata() { startActivity(new Intent(this,CalcularPlataActivity.class)); }
 
-    private void calcularSoldadura() { startActivity((new Intent(this,SoldadurasActivity.class))); }
+    private void calcularSoldadura() { startActivity(new Intent(this,SoldadurasActivity.class));}
 
-    private void calcularFundicion() {
-        Toast.makeText(MainActivity.this,"Fundición",Toast.LENGTH_SHORT).show();
-    }
+    private void calcularFundicion() { startActivity(new Intent(this,FundicionActivity.class));}
 
-    private void acercade() {
-        startActivity(new Intent(this,AcercadeActivity.class));
-    }
+    private void acercade() { startActivity(new Intent(this,AcercadeActivity.class)); }
 }
