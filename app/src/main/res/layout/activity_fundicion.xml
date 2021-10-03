@@ -218,14 +218,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+                app:layout_constraintTop_toBottomOf="@+id/txtTitleResultMetal" />
 
             <TextView
-                android:id="@+id/textView27"
+                android:id="@+id/txtTitleResultMetal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Gramos de XXXX que necesitas"
+                android:text="Gramos que necesitas"
                 android:textColor="@color/plata"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -352,11 +352,12 @@
 
             <TextView
                 android:id="@+id/textView31"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="8dp"
-                android:text="Revestimiento"
+                android:gravity="center"
+                android:text="Revestimiento en Gramos"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -366,8 +367,6 @@
                 android:id="@+id/txtResultRevestimiento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:text="0.00"
@@ -377,16 +376,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/gr"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/txtResultRevestimiento"
-                app:layout_constraintStart_toEndOf="@+id/txtResultRevestimiento"
-                app:layout_constraintTop_toTopOf="@+id/txtResultRevestimiento" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

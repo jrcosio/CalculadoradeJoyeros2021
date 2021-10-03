@@ -116,21 +116,25 @@ public class FundicionActivity extends AppCompatActivity {
                 case R.id.rbtnOro18K:
                     if ((pesoTotal != 0) && (pesoGoma!=0)) {
                         resultado = ((pesoTotal - pesoGoma)*PEORO18)+20;
+                        binding.txtTitleResultMetal.setText("Gramos de Oro que necesitas");
                     } else resultado = 0;
                     break;
                 case R.id.rbtnPlata:
                     if ((pesoTotal != 0) && (pesoGoma!=0)) {
                         resultado = ((pesoTotal - pesoGoma)*PEPLATA)+35;
+                        binding.txtTitleResultMetal.setText("Gramos de Plata que necesitas");
                     } else resultado = 0;
                     break;
                 case R.id.rbtnBronce:
                     if ((pesoTotal != 0) && (pesoGoma!=0)) {
                         resultado = ((pesoTotal - pesoGoma)*PEBRONCE)+20;
+                        binding.txtTitleResultMetal.setText("Gramos de Bronce que necesitas");
                     } else resultado = 0;
                     break;
                 case R.id.rbtnPlatino:
                     if ((pesoTotal != 0) && (pesoGoma!=0)) {
                         resultado = ((pesoTotal - pesoGoma)*PEPLATINO)+25;
+                        binding.txtTitleResultMetal.setText("Gramos de Plátino que necesitas");
                     } else resultado = 0;
                     break;
                 default:
