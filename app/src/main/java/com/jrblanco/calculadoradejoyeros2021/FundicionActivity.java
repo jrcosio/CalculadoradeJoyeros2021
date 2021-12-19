@@ -27,8 +27,8 @@ public class FundicionActivity extends AppCompatActivity {
         binding = ActivityFundicionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.toolbar.getRoot().setSubtitle("Fundición");
-        setSupportActionBar(binding.toolbar.getRoot());
+        //binding.toolbar.getRoot().setSubtitle("Fundición");
+        //setSupportActionBar(binding.toolbar.getRoot());
 
         this.metalSeleccionado = R.id.rbtnOro18K;
         this.calcularMetal(metalSeleccionado);

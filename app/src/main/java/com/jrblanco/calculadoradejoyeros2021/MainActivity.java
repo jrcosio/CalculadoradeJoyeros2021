@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar.getRoot());
+        //setSupportActionBar(binding.toolbar.getRoot());
 
-
+        binding.imagenInfo.setOnClickListener(view -> this.acercade());
         binding.cvOro.setOnClickListener(view -> this.calcularOro());
         binding.cvPlata.setOnClickListener(view -> this.calcularPlata());
         binding.cvSoldaduras.setOnClickListener(view -> this.calcularSoldadura());

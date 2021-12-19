@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toolbar;
 
 
 import com.jrblanco.calculadoradejoyeros2021.databinding.ActivityCalcularOroBinding;
@@ -19,8 +20,8 @@ public class CalcularOroActivity extends AppCompatActivity {
         binding = ActivityCalcularOroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.toolbar.getRoot().setSubtitle("Calcular Oro");
-        setSupportActionBar(binding.toolbar.getRoot());
+        //binding.toolbar.getRoot().setSubtitle("Calcular Oro");
+        //setSupportActionBar(binding.toolbar.getRoot());
 
        // binding.textView16.setVisibility(View.GONE); //View.VISIBLE
 

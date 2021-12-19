@@ -21,8 +21,8 @@ public class CalcularPlataActivity extends AppCompatActivity {
         binding = ActivityCalcularPlataBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.toolbar.getRoot().setSubtitle("Calcular Plata");
-        setSupportActionBar(binding.toolbar.getRoot());
+        //binding.toolbar.getRoot().setSubtitle("Calcular Plata");
+        //setSupportActionBar(binding.toolbar.getRoot());
 
         milesimasSeleccionada = R.id.rbtn925; //rButton por defecto.
 

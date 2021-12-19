@@ -7,6 +7,17 @@
     android:background="@color/fondoactivity"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imagenInfo"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvOro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        tools:ignore="ImageContrastCheck" />
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"

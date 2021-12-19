@@ -21,8 +21,8 @@ public class SoldadurasActivity extends AppCompatActivity {
         binding = ActivitySoldadurasBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.toolbar.getRoot().setSubtitle("Soldaduras de Oro y Plata");
-        setSupportActionBar(binding.toolbar.getRoot());
+        //binding.toolbar.getRoot().setSubtitle("Soldaduras de Oro y Plata");
+       // setSupportActionBar(binding.toolbar.getRoot());
 
         binding.btnSoldaduraOro.setOnClickListener( view -> {
                 this.mostrarFragmentSoldaduras(new SoldaduraOroFragment(),1);
